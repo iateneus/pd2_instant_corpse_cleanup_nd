@@ -1,0 +1,42 @@
+{
+  "name": "Instant Corpse Cleanup - No Decals",
+  "description": "Removes enemy bodies, shields, helmets, bulldozer debris, blood decals, bullet holes, and explosion decals.",
+  "author": "iateneus",
+  "image": "thumb.png",
+  "version": "1.4",
+  "updates": [
+  {
+    "identifier": "pd2_instant_corpse_cleanup_nd",
+    "host": {
+      "meta": "https://raw.githubusercontent.com/iateneus/pd2_instant_corpse_cleanup_nd/main/meta.json"
+    }
+  }
+],
+
+  "hooks": [
+    {
+      "hook_id": "lib/managers/enemymanager",
+      "script_path": "lua/main.lua"
+    },
+    {
+      "hook_id": "lib/units/enemies/cop/copdamage",
+      "script_path": "lua/main.lua"
+    },
+    {
+      "hook_id": "core/lib/managers/coresequencemanager",
+      "script_path": "lua/bulldozer_debris.lua"
+    },
+    {
+      "hook_id": "core/lib/managers/mission/coremissionmanager",
+      "script_path": "lua/bph_compatibility.lua"
+    },
+    {
+      "hook_id": "lib/managers/gameplaycentralmanager",
+      "script_path": "lua/no_decals.lua"
+    },
+    {
+      "hook_id": "lib/managers/explosionmanager",
+      "script_path": "lua/no_decals.lua"
+    }
+  ]
+}
