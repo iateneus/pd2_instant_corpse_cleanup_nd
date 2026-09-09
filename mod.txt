@@ -3,7 +3,7 @@
   "description": "Configurable cleanup of corpses, shields, cosmetic debris and impact decals.",
   "author": "iateneus",
   "image": "thumb.png",
-  "version": "1.4",
+  "version": "1.4.1",
   "updates": [
   {
     "identifier": "pd2_instant_corpse_cleanup_nd",
