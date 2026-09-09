@@ -27,7 +27,7 @@ if RequiredScript == "lib/managers/enemymanager" then
 
     local function dispose_corpses(self)
         if ICC.settings.remove_corpses and not ICC:InStealth() and self:is_corpse_disposal_enabled() then
-            self:_upd_corpse_disposal()
+            self:_upd_corpse_disposal(self._timer:time())
         end
     end
     Hooks:PostHook(EnemyManager, "on_enemy_died", "ICC_DisposeCorpseImmediately", dispose_corpses)
